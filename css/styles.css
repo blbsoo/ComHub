@@ -1,4 +1,3 @@
-
 /* General Reset and Box Sizing */
 * {
     margin: 0;
@@ -62,7 +61,7 @@ header {
     justify-content: center;
     align-items: center;
     padding: 10px;
-    margin: 20px auto; /* Center the header with some margin */
+    margin: 20px auto; 
 }
 
 .navbar {
@@ -71,25 +70,48 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 50px;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
+/* Profile Icon Styling */
+.profile-icon {
+    position: relative; /* position the lock icon absolutely */
 }
 
-.logo img {
+.profile-icon img {
     width: 25px;
-    margin-right: 10px;
+    height: 25px;
+    filter: grayscale(100%); /* Make the icon grayscale to indicate it is locked */
+    opacity: 0.5; /* Reduce opacity tof the lok */
 }
 
-.veneeva-text {
+/* Lock Icon Overlay */
+.profile-icon::after {
+    content: "\1F512"; 
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FF69B4; /* Lock icon color */
+    opacity: 0.7;
+    font-size: 15px; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    border-radius: 50%; 
+}
+
+
+
+.ltext {
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
     font-weight: 600;
     line-height: 25.74px;
     letter-spacing: 0px;
+    margin-right: 10px;
     color: #5B208A;
 }
 
@@ -98,7 +120,8 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 30px; /* Increased gap between navigation links */
+    gap: 30px; 
+  
 }
 
 .nav-link {
@@ -113,24 +136,8 @@ header {
     position: relative;
 }
 
-.nav-link::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    display: block;
-    margin-top: 5px;
-    right: 0;
-    background: #5B208A;
-    transition: width 0.4s ease;
-    -webkit-transition: width 0.4s ease;
-}
 
-.nav-link:hover::after, .nav-link:focus::after {
-    width: 100%; /* Full-width underline */
-    left: 0;
-    background: #5B208A; /* Match the color with the text */
-}
+
 
 /* Ticker styling */
 .launching-soon {
@@ -182,14 +189,14 @@ header {
 /* ******************************************************** */
 
 #hero {
-    height: auto; /* Adjust height to auto to fit content */
-    background-color: #FFF4E6; /* Same background as header */
+    height: auto; 
+    background-color: #FFF4E6; 
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Align items to the start of the section */
+    justify-content: flex-start; 
     align-items: center;
     text-align: center;
-    padding: 30px 20px 20px; /* Adjust the top padding to move content up */
+    padding: 30px 20px 20px; 
 }
 
 
@@ -197,7 +204,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%; /* Full width to center content inside */
+    width: 100%; 
     margin-top: 30px;
 }
 
@@ -205,10 +212,10 @@ header {
 .hero-subheader,
 .hero-text {
     text-align: left;
-    width: 95%; /* Consistent width */
+    width: 95%; 
     max-width: 600px;
-    margin: 0 auto; /* Center the elements */
-    margin-bottom: 15px; /* Adjust this value to bring elements closer */
+    margin: 0 auto; 
+    margin-bottom: 15px; 
 }
 .hero-header {
     font-family: 'Roboto Slab', serif;
@@ -216,7 +223,7 @@ header {
     font-weight: 1100;
     line-height: 63.18px;
     color: #000000;
-    margin-bottom: 25px; /* Adjust spacing as needed */
+    margin-bottom: 25px; 
 }
 
 .hero-subheader {
@@ -225,7 +232,7 @@ header {
     font-weight: 500;
     line-height: 18.72px;
     color: #000000;
-    margin-bottom: 25px; /* Adjust spacing as needed */
+    margin-bottom: 25px; 
 }
 
 .hero-text {
@@ -234,7 +241,7 @@ header {
     font-weight: normal;
     line-height: 16px;
     color: #000000;
-    margin-bottom: 25px; /* Adjust spacing as needed */
+    margin-bottom: 25px; 
 }
 
 /* Button Styling */
@@ -247,67 +254,67 @@ header {
     box-sizing: border-box;
     border: 1px solid #000000;
     box-shadow: -4px 4px 0px 0px #000000;
-    color: white; /* Add color to make the text visible */
+    color: white; 
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     width: 75%;
     cursor: pointer;
-    margin: 20px auto; /* Center the button and add space above */
-    border-radius: 1px; /* Optional: add some border radius for better appearance */
-    transition: all 0.2s ease; /* Smooth transition for hover and active effects */
+    margin: 20px auto;
+    border-radius: 1px; 
+    transition: all 0.2s ease; 
 }
 
 .subscribe-button:hover {
-    background: #001a3e; /* Darker background on hover */
-    box-shadow: -3px 3px 0px 0px #000000; /* Slightly smaller shadow on hover */
+    background: #001a3e; 
+    box-shadow: -3px 3px 0px 0px #000000; 
 }
 
 .subscribe-button:active {
-    background: #001a3e; /* Darker background when clicked */
-    box-shadow: -2px 2px 0px 0px #000000; /* Even smaller shadow when clicked */
-    transform: translate(1px, -1px); /* Slight movement to simulate click */
+    background: #001a3e; 
+    box-shadow: -2px 2px 0px 0px #000000; 
+    transform: translate(1px, -1px); 
 }
 /* Start Now Popup Box Styling */
 .start-now-popup {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1000; /* Sit on top */
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.5); 
 }
 
 .start-now-popup-content {
-    background-color: #CCD858; /* Background color */
-    color: #FE2901; /* Text color */
-    margin: 15% auto; /* 15% from the top and centered */
+    background-color: #CCD858; 
+    color: #FE2901; 
+    margin: 15% auto;
     padding: 20px;
     border: 1px solid #000000;
-    width: 60%; /* Could be more or less, depending on screen size */
-    max-width: 490px; /* Maximum width */
+    width: 60%; 
+    max-width: 490px; 
     text-align: center;
-    border-radius: 10px; /* Optional: rounded corners */
-    box-shadow: -4px 4px 0px 0px #000000; /* Optional: shadow effect */
+    border-radius: 10px; 
+    box-shadow: -4px 4px 0px 0px #000000; 
     font-family: 'Poppins', sans-serif;
     font-weight: bold ;
-    display: flex; /* Use Flexbox */
+    display: flex; 
     flex-direction: column;
-    justify-content: center; /* Center vertically */
-    align-items: center; /* Center horizontally */
-    height: 200px; /* Set a fixed height for proper centering */
-    padding-bottom: 40px;
+    justify-content: center; 
+    align-items: center; 
+    height: 210px; 
+    padding-bottom: 45px;
 }
 
 .start-now-popup-content p {
-    color: #FE2901; /* Text color */
+    color: #FE2901; 
 }
 
 .start-now-close-button {
     color: #aaa;
-    align-self: flex-end; /* Align the close button to the end (right) */
+    align-self: flex-end; 
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
@@ -326,50 +333,50 @@ header {
     margin-top:0px;
     width: 70%;
     bottom: 30%;
-    z-index: 0; /* Ensure it goes under the separator */
+    z-index: 0;
     
 }
 /* Join Now Popup Box Styling */
 .join-now-popup {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1000; /* Sit on top */
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .join-now-popup-content {
-    background-color: #5B208A; /* Background color */
-    color: #FFFFFF; /* Text color */
-    margin: 15% auto; /* 15% from the top and centered */
+    background-color: #5B208A; 
+    color: #FFFFFF; 
+    margin: 15% auto; 
     padding: 20px;
     border: 1px solid #000000;
-    width: 80%; /* Could be more or less, depending on screen size */
-    max-width: 600px; /* Maximum width */
+    width: 80%; 
+    max-width: 600px; 
     text-align: center;
-    border-radius: 10px; /* Optional: rounded corners */
-    box-shadow: -4px 4px 0px 0px #000000; /* Optional: shadow effect */
+    border-radius: 10px; 
+    box-shadow: -4px 4px 0px 0px #000000; 
     font-family: 'Poppins', sans-serif;
     display: flex; /* Use Flexbox */
     flex-direction: column;
-    justify-content: center; /* Center vertically */
-    align-items: center; /* Center horizontally */
-    height: 200px; /* Set a fixed height for proper centering */
+    justify-content: center; 
+    align-items: center; 
+    height: 200px; 
     padding-bottom: 60px;
     font-weight: bold ;
 }
 
 .join-now-popup-content p {
-    color: #FFFFFF; /* Text color */
+    color: #FFFFFF; 
 }
 
 .join-now-close-button {
     color: #aaa;
-    align-self: flex-end; /* Align the close button to the end (right) */
+    align-self: flex-end; 
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
@@ -392,27 +399,27 @@ header {
 .separator1 {
     width: 100%;
     height: 8px;
-    background-color: #5B208A; /* Color of the separator line */
+    background-color: #5B208A; 
     z-index: 3;
-    position: relative; /* Ensure it remains within the document flow */
+    position: relative;
 }
 
 /* Existing #section2 styling */
 #section2 {
-    min-height: 100vh; /* Ensure the section takes at least the full viewport height */
-    background-color: #B2B5DA; /* Background color for section 2 */
+    min-height: 100vh;
+    background-color: #B2B5DA; 
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     padding: 20px 0;
-    box-sizing: border-box; /* Ensure padding is included in the height calculation */
-    overflow: auto; /* Allow scrolling if content exceeds height */
-    position: relative; /* Ensure this is relative to contain the pseudo-element */
+    box-sizing: border-box;
+    overflow: auto; 
+    position: relative; 
     background-image: linear-gradient(#FBC4EE 3px, transparent 1px), 
                       linear-gradient(to right, #FBC4EE 3px, transparent 1px);
-    background-size: 150px 150px; /* Adjust this to control the spacing */
-    z-index: 3; /* Ensure this is below all content */
+    background-size: 150px 150px; 
+    z-index: 3; 
 }
 
 
@@ -423,62 +430,62 @@ header {
 /* New: Add the SVG styling */
 #section2 .smileyface1 {
     position: absolute;
-    top: 20px; /* Adjust as needed */
-    left: 20px; /* Adjust as needed */
-    width: 80px; /* Adjust size as needed */
-    height: 80px; /* Adjust size as needed */
-    z-index: 1; /* Ensure this is above the grid lines but below the boxes */
+    top: 20px;
+    left: 20px; 
+    width: 80px; 
+    height: 80px;
+    z-index: 1; 
 }
 #section2 .smileyface2 {
     position: absolute;
-    bottom: 20px; /* Adjust as needed */
-    right: 20px; /* Adjust as needed */
-    width: 80px; /* Adjust size as needed */
-    height: 80px; /* Adjust size as needed */
-    z-index: 1; /* Ensure this is above the grid lines but below the boxes */
+    bottom: 20px; 
+    right: 20px; 
+    width: 80px; 
+    height: 80px; 
+    z-index: 1;
     
 }
 #section2 .showtimestyle {
     position: absolute;
-    top: 900px; /* Adjust as needed */
-    left: 20px; /* Adjust as needed */
-    width: 120px; /* Adjust size as needed */
-    height: 120px; /* Adjust size as needed */
-    z-index: 1; /* Ensure this is above the grid lines but below the boxes */
-    
+    top: 900px; 
+    left: 20px; 
+    width: 120px; 
+    height: 120px; 
+    z-index: 1;
 }
+
 #section2 .comedystyle {
     position: absolute;
-    top: 20px; /* Adjust as needed */
-    right: 20px; /* Adjust as needed */
-    width: 120px; /* Adjust size as needed */
-    height: 120px; /* Adjust size as needed */
-    z-index: 1; /* Ensure this is above the grid lines but below the boxes */
+    top: 20px; 
+    right: 20px; 
+    width: 120px; 
+    height: 120px; 
+    z-index: 1; 
     
 }
 #section2 .rings {
     position: absolute;
-    top: 1100px; /* Adjust as needed */
-    right: 20px; /* Adjust as needed */
-    width: 120px; /* Adjust size as needed */
-    height: 120px; /* Adjust size as needed */
-    z-index: 1; /* Ensure this is above the grid lines but below the boxes */
+    top: 1100px;
+    right: 20px; 
+    width: 120px; 
+    height: 120px; 
+    z-index: 1; 
     
 }
 #section2 .mouse {
     position: absolute;
-    top: 1150px; /* Adjust as needed */
-    right: 395px; /* Adjust as needed */
-    width: 30px; /* Adjust size as needed */
-    height: 30px; /* Adjust size as needed */
-    z-index: 1; /* Ensure this is above the grid lines but below the boxes */
+    top: 1150px; 
+    right: 395px; 
+    width: 30px;
+    height: 30px; 
+    z-index: 1;
     
 }
 
 
-/* Adjust the z-index of .mission-heroes and other boxes to be above the grid lines */
+
 .mission-heroes, .comedians-box, .organisers-box, .audience-box, .glitch-box, .main-box {
-    z-index: 1; /* Ensure this is above the grid lines */
+    z-index: 1; 
 }
 
 
@@ -495,21 +502,21 @@ header {
     font-size: 18px;
     color: #ffffff;
     text-align: center;
-    margin: 20px auto; /* Center the box horizontally and add margin at the top */
-    width: 150px; /* Fixed width */
-    height: auto; /* Ensure height adjusts to content */
-    max-width: none; /* Prevent width from changing */
+    margin: 20px auto; 
+    width: 150px; 
+    height: auto; 
+    max-width: none; 
 }
-/* New: Add the following CSS */
+
 .mission-heroes {
-    width: 220px !important; /* Set a fixed width */
+    width: 220px !important; 
 }
 
 
 
 /* For comedians box styling */
 .comedians-box {
-    position: relative; /* Changed to relative for better stacking */
+    position: relative;
     width: 80%;
     height: auto;
     background-color: #FFDD44;
@@ -518,12 +525,12 @@ header {
     box-shadow: -4px 4px 0px 0px #000000;
     padding: 15px;
     z-index: 5;
-    margin: 20px auto; /* Center the box horizontally and add margin */
+    margin: 20px auto; 
 }
 
 .comedians-box .box-header {
     display: flex;
-    justify-content: center; /* Center the header text */
+    justify-content: center;
     align-items: center;
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
@@ -550,15 +557,15 @@ header {
 }
 
 .comedians-box .header-line {
-    width: calc(100% + 30px); /* Make the line take the full width of the box */
+    width: calc(100% + 30px); 
     height: 3px;
-    background-color: #000000; /* Ensure the line color is black */
-    border: none; /* Remove any border */
-    margin: 10px -15px; /* Adjusted margins to make the line take the full width */
+    background-color: #000000; 
+    border: none; 
+    margin: 10px -15px;
 }
 
 .comedians-box .box-content p {
-    margin-bottom: 10px; /* Increase spacing between paragraphs */
+    margin-bottom: 10px; 
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
     font-weight: 400;
@@ -572,13 +579,13 @@ header {
     margin-right: 10px;
     display: inline-block;
     position: relative;
-    top: 2px; /* Align with the bottom of the square */
+    top: 2px; 
 }
 
 
 /* For organisers box styling */
 .organisers-box {
-    position: relative; /* Changed to relative for better stacking */
+    position: relative; 
     width: 80%;
     height: auto;
     background-color: #FFDD44;
@@ -587,12 +594,12 @@ header {
     box-shadow: -4px 4px 0px 0px #000000;
     padding: 15px;
     z-index: 5;
-    margin: 20px auto; /* Center the box horizontally and add margin */
+    margin: 20px auto; 
 }
 
 .organisers-box .box-header {
     display: flex;
-    justify-content: center; /* Center the header text */
+    justify-content: center; 
     align-items: center;
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
@@ -619,15 +626,15 @@ header {
 }
 
 .organisers-box .header-line {
-    width: calc(100% + 30px); /* Make the line take the full width of the box */
+    width: calc(100% + 30px); 
     height: 3px;
-    background-color: #000000; /* Ensure the line color is black */
-    border: none; /* Remove any border */
-    margin: 10px -15px; /* Adjusted margins to make the line take the full width */
+    background-color: #000000; 
+    border: none; 
+    margin: 10px -15px; 
 }
 
 .organisers-box .box-content p {
-    margin-bottom: 10px; /* Increase spacing between paragraphs */
+    margin-bottom: 10px; 
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
     font-weight: 400;
@@ -641,17 +648,17 @@ header {
     margin-right: 10px;
     display: inline-block;
     position: relative;
-    top: 2px; /* Align with the bottom of the square */
+    top: 2px; 
 }
 
 
 /* Glitch Container */
 .glitch-container {
     position: relative;
-    width: 80%; /* Use percentage for responsive width */
-    max-width: 360px; /* Max width to prevent it from getting too large */
-    margin: 10px auto; /* Center the container */
-    margin-top: 20px; /* Adjust margin as needed */
+    width: 80%; 
+    max-width: 360px; 
+    margin: 10px auto; 
+    margin-top: 20px; 
     z-index: 1000;
 }
 
@@ -761,7 +768,7 @@ header {
     line-height: 1.5;
 }
 
-/* Ensure other elements don't interfere with the buttons */
+
 .main-box, .glitch-box {
     z-index: 10;
 }
@@ -804,12 +811,12 @@ header {
     box-shadow: -4px 4px 0px 0px #000000;
     padding: 15px;
     z-index: 5;
-    margin: 20px auto; /* Center the box horizontally and add margin */
+    margin: 20px auto; 
 }
 
 .audience-box .box-header {
     display: flex;
-    justify-content: center; /* Center the header text */
+    justify-content: center; 
     align-items: center;
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
@@ -836,15 +843,15 @@ header {
 }
 
 .audience-box .header-line {
-    width: calc(100% + 30px); /* Make the line take the full width of the box */
+    width: calc(100% + 30px);
     height: 3px;
-    background-color: #000000; /* Ensure the line color is black */
-    border: none; /* Remove any border */
-    margin: 10px -15px; /* Adjusted margins to make the line take the full width */
+    background-color: #000000;
+    border: none; 
+    margin: 10px -15px; 
 }
 
 .audience-box .box-content p {
-    margin-bottom: 10px; /* Increase spacing between paragraphs */
+    margin-bottom: 10px; 
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
     font-weight: 400;
@@ -879,7 +886,7 @@ header {
     margin-top: 20px;
 }
 
-/* Ensure boxes take up equal space */
+
 .comedians-box,
 .organisers-box {
     width: 45%;
@@ -892,45 +899,45 @@ header {
 /* Popup Box Styling */
 .popup {
     display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1000; /* Sit on top */
+    position: fixed; 
+    z-index: 1000; /* the position is on top */
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.5); 
 }
 
 .popup-content {
-    background-color: #FF37D0; /* Same color as button background */
-    color: #D1D655; /* Text color */
-    margin: 15% auto; /* 15% from the top and centered */
+    background-color: #FF37D0; 
+    color: #D1D655; 
+    margin: 15% auto; 
     padding: 20px;
     height: 24%;
     border: 1px solid #000000;
-    width: 40%; /* Could be more or less, depending on screen size */
-    max-width: 400px; /* Maximum width */
+    width: 70%; 
+    max-width: 400px; 
     text-align: center;
-    border-radius: 1px; /* Optional: rounded corners */
-    box-shadow: -4px 4px 0px 0px #000000; /* Optional: shadow effect */
+    border-radius: 1px; 
+    box-shadow: -4px 4px 0px 0px #000000; 
     font-family: 'Poppins', sans-serif;
     display: flex; /* Use Flexbox */
     flex-direction: column;
-    justify-content: center; /* Center vertically */
-    align-items: center; /* Center horizontally */
-    height: 190px; /* Set a fixed height for proper centering */
+    justify-content: center; 
+    align-items: center; 
+    height: 240px; 
     font-weight: bold ;
 }
 
 .popup-content p {
-    color: #F9CE44; /* Text color */
+    color: #F9CE44; 
     padding-bottom: 40px;
 }
 
 .close-button {
     color: #aaa;
-    align-self: flex-end; /* Align the close button to the end (right) */
+    align-self: flex-end; 
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
@@ -943,13 +950,10 @@ header {
     cursor: pointer;
 }
 
-
-
-
-
 /* ******************************************************** */
 /* section 3
 /* ******************************************************** */
+
 /* Separator Line Styling */
 .separator2 {
     width: 100%;
@@ -960,7 +964,7 @@ header {
     background-color: #FFF4E6;
     padding: 20px;
     text-align: center;
-    min-height: calc(100vh - 100px); /* Adjust as needed to ensure it's the same height as #hero */
+    min-height: calc(100vh - 100px); 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -968,20 +972,20 @@ header {
 
 .section3-content {
     width: 100%;
-    max-width: 1200px; /* Adjust max width as needed */
+    max-width: 1200px; 
     margin: 0 auto;
     padding: 20px;
     box-sizing: border-box;
 }
 
 .sprocess-svg {
-    display: block; /* Ensures the SVG is not inline */
-    margin-top: 20px; /* 3cm gap from the separator line */
-    width: 70%; /* Adjust the width as needed, or use specific px or % */
-    height: auto; /* Maintains the aspect ratio */
-    z-index: 2; /* Ensure it's above other elements if needed */
-    margin-left: auto; /* Centers the element horizontally */
-    margin-right: auto; /* Centers the element horizontally */
+    display: block; 
+    margin-top: 20px; 
+    width: 80%; 
+    height: auto; 
+    z-index: 2; 
+    margin-left: auto; 
+    margin-right: auto; 
     left: 0;
     right: 0;
 }
@@ -1001,37 +1005,37 @@ header {
     flex-direction: column; /* Stack boxes vertically */
     align-items: center;
     width: 100%;
-    height: auto; /* Adjust height to auto for flexibility */
-    padding-bottom: 20px; /* Add some padding at the bottom */
+    height: auto; 
+    padding-bottom: 20px; 
     flex-wrap: wrap; /* Allow wrapping on smaller screens */
-    justify-content: center; /* Center align the boxes */
-    gap: 45px; /* Add gap between the boxes */
+    justify-content: center; 
+    gap: 45px; 
 }
 
 /* Box Styling */
 .creation-box {
     position: relative;
-    width: 80%; /* Reduced width for smaller boxes */
-    max-width: 220px; /* Reduced maximum width */
-    margin: 10px 0; /* Add margin for spacing between boxes */
+    width: 80%; 
+    max-width: 220px;
+    margin: 10px 0; 
     height: auto;
     border-radius: 6px;
     opacity: 1;
     background: #FE75BA;
     box-sizing: border-box;
     border: 2px solid #FD3866;
-    padding: 15px; /* Reduced padding */
+    padding: 15px; 
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    flex: 1; /* Ensure all boxes take up equal height */
+    flex: 1; 
 }
 
 .createicon-svg {
-    width: 60px; /* Reduced size of the SVG */
+    width: 60px; 
     height: auto;
-    margin-bottom: 10px; /* Adjusted margin */
+    margin-bottom: 10px;
 }
 
 .box-content {
@@ -1043,49 +1047,49 @@ header {
 
 .box-title {
     font-family: 'Poppins', sans-serif;
-    font-size: 16px; /* Reduced font size */
+    font-size: 16px;
     font-weight: 300;
     color: #FFFFFF;
     margin: 0;
 }
 
 .box-separator {
-    width: 100%; /* Ensure the separator line takes the full width of the box content */
+    width: 100%; 
     border: none;
-    border-top: 2px solid #FD3866; /* Reduced thickness */
+    border-top: 2px solid #FD3866; 
     margin: 10px 0;
 }
 
 .box-description {
     font-family: 'Poppins', sans-serif;
-    font-size: 12px; /* Reduced font size */
+    font-size: 12px;
     color: #FFFFFF;
     margin: 0;
-    padding: 0 10px; /* Add padding to prevent text from touching the edges */
+    padding: 0 10px; 
 }
 
 
 
 /* Join Now Container */
 .join-now-container {
-    position: relative; /* Ensure the container is relatively positioned */
+    position: relative; 
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 60px; /* Adjust margin as needed */
-    z-index: 10; /* Ensure it appears above other content */
+    margin-top: 60px; 
+    z-index: 10; 
 }
 
 /* Circle SVG Styling */
 .circle-svg {
-    width: 140px; /* Adjust size as needed */
-    height: 140px; /* Adjust size as needed */
-    position: absolute; /* Position it absolutely */
-    bottom: -40px; /* Adjust bottom position to place it above the button */
+    width: 140px; 
+    height: 140px; 
+    position: absolute; 
+    bottom: -40px; 
     left: 50%;
-    transform: translateX(-50%); /* Center it horizontally */
-    z-index: 20; /* Ensure it appears above the button */
-    pointer-events: none; /* Allow clicks to pass through the circle */
+    transform: translateX(-50%); 
+    z-index: 20;
+    pointer-events: none; 
 }
 
 /* Join Now Button Styling */
@@ -1093,30 +1097,30 @@ header {
     background-color: #002D65;
     color: #FFFFFF;
     border: none;
-    padding: 10px 20px; /* Adjusted padding for smaller screens */
-    font-size: 14px; /* Adjusted font size for smaller screens */
+    padding: 10px 20px; 
+    font-size: 14px; 
     font-family: 'Poppins', sans-serif;
     cursor: pointer;
     font-weight: normal;
     border-radius: 6px;
-    margin-top: 40px; /* Adjust margin to allow space for the circle */
-    width: 55%; /* Make the button take up 60% of the container width */
-    max-width: 200px; /* Set a maximum width for the button */
-    transition: all 0.2s ease; /* Smooth transition for hover and active effects */
-    box-shadow: -4px 4px 0px 0px #000000; /* Add shadow for better appearance */
-    text-align: center; /* Center text inside the button */
+    margin-top: 40px; 
+    width: 55%; 
+    max-width: 200px; 
+    transition: all 0.2s ease;
+    box-shadow: -4px 4px 0px 0px #000000; 
+    text-align: center; 
 
 }
 
 .joinnow-button:hover {
-    background: #001a3e; /* Darker background on hover */
-    box-shadow: -3px 3px 0px 0px #000000; /* Slightly smaller shadow on hover */
+    background: #001a3e;
+    box-shadow: -3px 3px 0px 0px #000000; 
 }
 
 .joinnow-button:active {
-    background: #001a3e; /* Darker background when clicked */
-    box-shadow: -2px 2px 0px 0px #000000; /* Even smaller shadow when clicked */
-    transform: translate(1px, -1px); /* Slight movement to simulate click */
+    background: #001a3e; 
+    box-shadow: -2px 2px 0px 0px #000000; 
+    transform: translate(1px, -1px); 
 }
 
 
@@ -1137,25 +1141,25 @@ header {
     background-color: #FFFFFF;
     padding: 20px;
     text-align: center;
-    height: 100vh; /* Ensure it takes the full viewport height */
+    height: 100vh; 
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-image: linear-gradient(#f69889 3px, transparent 1px), 
                       linear-gradient(to right, #f69889 3px, transparent 1px);
-    background-size: 150px 150px; /* Adjust this to control the spacing */
-    overflow: hidden; /* Hide overflow from the section itself */
+    background-size: 150px 150px; 
+    overflow: hidden; 
 }
 
 .section4-content {
-    flex: 1; /* Allow content to grow and take remaining space */
-    overflow-y: auto; /* Enable vertical scrolling within this element */
+    flex: 1; 
+    overflow-y: auto;
     width: 100%;
-    max-width: 1200px; /* Adjust max width as needed */
+    max-width: 1200px; 
     margin: 0 auto;
     padding: 20px;
     box-sizing: border-box;
-    position: relative; /* To position the box within */
+    position: relative; 
 }
 
 
@@ -1166,42 +1170,42 @@ header {
     box-sizing: border-box;
     border: 1px solid #000000;
     box-shadow: -4px 4px 0px 0px #000000;
-    padding: 10px 20px; /* Adjust padding as needed */
+    padding: 10px 20px; 
     position: relative;
-    margin-bottom: 20px; /* Add margin to create space below */
-    font-size: 18px; /* Adjust font size for mobile */
-    max-width: 60%; /* Ensure the box doesn't get too wide */
-    text-align: center; /* Ensure text is center-aligned */
-    display: flex; /* Enable Flexbox */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    margin-bottom: 20px; 
+    font-size: 18px; 
+    max-width: 60%; 
+    text-align: center; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
     font-weight: 500;
-    height: 60px; /* Set a fixed height for the box */
+    height: 60px;
 }
 
 
 /* Staggered Text Layers */
 .text-staggered {
     text-align: center;
-    font-size: 17px; /* Text size */
-    font-family: 'Arial', sans-serif; /* Consistent font styling */
+    font-size: 17px; 
+    font-family: 'Arial', sans-serif; 
     color: transparent;
-    -webkit-text-stroke: 1px #FF66FF; /* Pink stroke */
+    -webkit-text-stroke: 1px #FF66FF; 
     font-weight: 550;
     z-index: 3;
     letter-spacing: 4px;
     text-transform: uppercase;
-    margin-bottom: 100px; /* Adjust margin to create space below */
+    margin-bottom: 100px; 
 }
 
 .text-layer {
     position: relative;
     color: transparent;
-    -webkit-text-stroke-width: 2px; /* Pink stroke width */
+    -webkit-text-stroke-width: 2px; 
 }
 
 .text-staggered .text-layer:nth-child(1) {
-    color: #FF66FF; /* Pink fill color */
+    color: #FF66FF; 
     transform: translate(0.5px, 0.5px);
 }
 
@@ -1214,89 +1218,89 @@ header {
 }
 
 .info-rectangle {
-    width: 95%; /* Adjust as needed for mobile */
-    max-width: 340px; /* Ensure a max width */
+    width: 95%; 
+    max-width: 340px; 
     padding: 20px;
     background: #002D65;
     box-sizing: border-box;
     border: 3px solid #FF37D0;
-    z-index: 3; /* Ensure it's above other elements */
-    color: #FFFFFF; /* White text color */
-    font-family: 'Poppins', sans-serif; /* Consistent font styling */
-    margin: 0 auto 50px auto; /* Center horizontally and add space below */
-    position: relative; /* Changed to relative positioning */
-    top: -30px; /* Move up by 50px, adjust as needed */
+    z-index: 3; 
+    color: #FFFFFF;
+    font-family: 'Poppins', sans-serif; 
+    margin: 0 auto 50px auto; 
+    position: relative; 
+    top: -30px; 
 }
 
 .info-title {
-    font-family: 'Poppins', sans-serif; /* Consistent font styling */
-    font-size: 16px; /* Adjust size as needed */
-    font-weight: 500; /* Normal font weight */
-    color: #FF37D0; /* Pink color for the title */
+    font-family: 'Poppins', sans-serif; 
+    font-size: 16px; 
+    font-weight: 500;
+    color: #FF37D0; 
     text-align: center;
-    margin: 0 0 10px 0; /* Margin for spacing */
+    margin: 0 0 10px 0; 
 }
 
 .info-separator {
     border: none;
-    border-top: 1px solid #FFFFFF; /* White line */
-    margin: 10px 0; /* Spacing around the separator */
+    border-top: 1px solid #FFFFFF; 
+    margin: 10px 0; 
 }
 
 .info-text {
-    font-family: 'Poppins', sans-serif; /* Consistent font styling */
-    font-size: 15px; /* Adjust size as needed */
+    font-family: 'Poppins', sans-serif; 
+    font-size: 15px; 
     font-weight: 300;
-    color: #FFFFFF; /* White text color */
-    line-height: 1.4; /* Line height for readability */
-    margin: 0; /* Remove default margin */
+    color: #FFFFFF; 
+    line-height: 1.4; 
+    margin: 0; 
 }
 
 .bullet-points {
     display: flex;
-    flex-direction: column; /* Stack bullet points vertically */
-    align-items: flex-start; /* Align items to the left */
-    margin: 20px 0; /* Add margin for spacing */
+    flex-direction: column; 
+    align-items: flex-start; 
+    margin: 20px 0; 
 }
 
 .bullet-point {
     display: flex;
-    align-items: flex-start; /* Align items to the top */
-    margin: 5px 0; /* Adjust margin between bullet points */
+    align-items: flex-start; 
+    margin: 5px 0; 
 }
 
 .bullet-point object {
-    margin-right: 20px; /* Space between SVG and text */
+    margin-right: 20px; 
     position: relative;
-    top: -5px; /* Adjust to move bullet up */
+    top: -5px; 
 }
 
 .bullet-point-text {
-    font-family: 'Gochi Hand', cursive; /* Consistent font styling */
-    font-size: 18px; /* Adjust size as needed */
-    color: #000000; /* Text color */
+    font-family: 'Gochi Hand', cursive; 
+    font-size: 18px; 
+    color: #000000; 
     font-weight: 600;
-    margin-top: -7px; /* Adjust top margin to move text up */
+    margin-top: -7px; 
     margin-bottom: 10px;
 }
 
 .smileyv-svg {
     position: relative;
-    margin-top: 40px; /* Add space above the SVG */
-    margin-bottom: 40px; /* Add space above the SVG */
-    width: 290px; /* Adjust size as needed */
-    height: auto; /* Maintain aspect ratio */
-    z-index: 2; /* Ensure it's above other elements if needed */
-    align-self: center; /* Center the SVG horizontally */
+    margin-top: 40px; 
+    margin-bottom: 40px; 
+    width: 290px; 
+    height: auto; 
+    z-index: 2; 
+    align-self: center; 
 }
 
 
 .text-staggered2 {
     text-align: center;
-    font-size: 17px; /* Text size */
-    font-family: 'Arial', sans-serif; /* Consistent font styling */
+    font-size: 17px; 
+    font-family: 'Arial', sans-serif; 
     color: transparent;
-    -webkit-text-stroke: 1px #FF66FF; /* Pink stroke */
+    -webkit-text-stroke: 1px #FF66FF; 
     font-weight: 550;
     z-index: 3;
     letter-spacing: 4px;
@@ -1304,7 +1308,7 @@ header {
 }
 
 .text-staggered2 .text-layer:nth-child(1) {
-    color: #FF66FF; /* Pink fill color */
+    color: #FF66FF; 
     transform: translate(0.5px, 0.5px);
 }
 
@@ -1318,35 +1322,35 @@ header {
 
 
 .svg-container {
-    position: relative; /* Set relative positioning to the container */
+    position: relative; 
 }
 .comface-svg {
     display: none;
-    position: absolute; /* Allow positioning */
-    width: 100px; /* Set a specific width */
-    height: auto; /* Maintain aspect ratio */
+    position: absolute; 
+    width: 100px; 
+    height: auto; 
 
 }
 /* Hide the SVG by default */
 .comface2-svg {
-    display: none; /* Hide by default */
-    position: absolute; /* Allow positioning */
-    width: 100px; /* Set a specific width */
-    height: auto; /* Maintain aspect ratio */
-    z-index: 10; /* Ensure it is above other elements if necessary */
+    display: none; 
+    position: absolute; 
+    width: 100px; 
+    height: auto; 
+    z-index: 10; 
 }
 
 .svg-container3 {
-    position: relative; /* Set relative positioning to the container */
+    position: relative; 
 }
 
 /* Hide the SVG by default */
 .comface3-svg {
-    display: none; /* Hide by default */
-    position: absolute; /* Allow positioning */
-    width: 100px; /* Set a specific width */
-    height: auto; /* Maintain aspect ratio */
-    z-index: 10; /* Ensure it is above other elements if necessary */
+    display: none; 
+    position: absolute; 
+    width: 100px; 
+    height: auto; 
+    z-index: 10;
 }
 
 
@@ -1370,7 +1374,7 @@ header {
 }
 
 .top-half, .bottom-half {
-    width: 100%; /* Full width */
+    width: 100%; 
     height: 50%; /* Half the height of the section */
     display: flex;
     flex-direction: column; /* Stack content vertically */
@@ -1389,43 +1393,43 @@ header {
     display: flex; /* Enable flexbox */
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
-    height: 50vh; /* Ensure it takes up half the viewport height */
-    position: relative; /* Enable absolute positioning within this container */
+    height: 50vh; 
+    position: relative; 
 }
 .center-svg {
-    max-width: 60%; /* Ensure SVG scales down if needed */
-    max-height: 60%; /* Ensure SVG scales down if needed */
+    max-width: 60%; 
+    max-height: 60%; 
     margin-top: 55px;
 }
 
 
 .top-half h2 {
     font-family: 'Roboto Mono', monospace;
-    font-size: 18px;
-    font-weight: bolder;
+    font-size: 17px;
+    font-weight: 900;
     line-height: 32.76px;
     letter-spacing: 0px;
     color: #00285F;
-    margin: 0; /* Remove default margin */
+    margin: 0; 
     top:60%;
 }
 
 .top-half p {
     font-family: 'Poppins', sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
     line-height: 21.06px;
     letter-spacing: 0px;
-    width: 75%;
+    width: 85%;
     color: #030036;
-    margin: 7px 0 0 0; /* Adjust margin as needed */
+    margin: 7px 0 0 0;
     
 }
 #subscribe-form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 30px; /* Adjust margin as needed */
+    margin-top: 25px; 
     width: 67%;
 }
 
@@ -1436,7 +1440,7 @@ header {
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 20px; 
+    margin-bottom: 10px; 
 }
 
 #subscribe-form button {
@@ -1457,55 +1461,55 @@ header {
 }
 #subscribe-form button:active {
     background-color: #030036;
-    transform: scale(0.98); /* Slightly reduce size to indicate a click */
+    transform: scale(0.98); 
 }
 
 
 .bottom-left-svg {
     position: absolute;
     left: 0px;
-    top: 265px;
-    max-width: 90px; /* Adjust size as needed */
+    top: 105px;
+    max-width: 90px;
     height: auto;
 }
 .bottom-left2-svg {
     position: relative;
     left: 125px;
-    bottom: 290px;
-    max-width: 85px; /* Adjust size as needed */
+    bottom: 200px;
+    max-width: 85px;
     height: auto;
 }
 .bottom-left3-svg {
     position: absolute;
     right: 0px;
-    top: 279px;
-    max-width: 90px; /* Adjust size as needed */
+    top: 190px;
+    max-width: 90px;
     height: auto;
 }
 /* Subscribe Popup Box Styling */
 .subscribe-popup {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1000; /* Sit on top */
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
+    width: 100%; 
+    height: 100%; 
     overflow: auto; /* Enable scroll if needed */
     background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
 }
 
 .subscribe-popup-content {
-    background-color: #9DEF2A; /* Background color */
-    color: #0649A4; /* Text color */
-    margin: 15% auto; /* 15% from the top and centered */
+    background-color: #9DEF2A; 
+    color: #0649A4; 
+    margin: 15% auto; 
     padding: 20px;
     border: 1px solid #000000;
-    width: 80%; /* Could be more or less, depending on screen size */
-    max-width: 600px; /* Maximum width */
+    width: 80%; 
+    max-width: 600px;
     text-align: center;
-    border-radius: 10px; /* Optional: rounded corners */
-    box-shadow: -4px 4px 0px 0px #0649A4; /* Optional: shadow effect */
+    border-radius: 10px; 
+    box-shadow: -4px 4px 0px 0px #0649A4; 
     font-family: 'Poppins', sans-serif;
     display: flex; /* Use Flexbox */
     flex-direction: column;
@@ -1516,12 +1520,12 @@ header {
 }
 
 .subscribe-popup-content p {
-    color: #0649A4; /* Text color */
+    color: #0649A4; 
 }
 
 .subscribe-close-button {
     color: #aaa;
-    align-self: flex-end; /* Align the close button to the end (right) */
+    align-self: flex-end; 
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
@@ -1547,11 +1551,12 @@ header {
     width: 100%;
     height: 8px;
     background-color: #FD3866;
+    
 }
 
 /* Section 6 */
 #section6 {
-    height: 50vh; /* Adjust as needed */
+    height: 50vh; 
     display: flex;
     position: relative;
     background-color: #FFF4E6;
@@ -1571,8 +1576,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 80%; /* Adjust as needed */
-    max-width: 600px; /* Adjust as needed */
+    width: 80%; 
+    max-width: 600px; 
     height: 120px;
     margin-top: 20px;
 }
@@ -1583,36 +1588,36 @@ header {
 
 .enquiry-box .text {
     font-family: 'Indie Flower', cursive; /* Journal-like font from Google Fonts */
-    font-size: 1.0em; /* Adjust as needed */
-    font-weight: 900; /* Make the font bolder */
+    font-size: 1.0em; 
+    font-weight: 900; 
     color: #000000;
     width: 57%;
     margin-top: 30px;
 }
 
 .enquiry-box .icon img {
-    width: 80px; /* Adjust as needed */
+    width: 80px; 
     height: auto;
 }
 
 .alert-icon {
-    margin-top: 50px; /* Adjust as needed */
+    margin-top: 50px; 
     position: relative;
 }
 
 .alert-icon img {
-    width: 330px; /* Adjust as needed */
+    width: 330px; 
     height: auto;
 }
 .social-media-icons {
     display: flex;
     justify-content: center;
-    gap: 10px; /* Adjust spacing between icons as needed */
-    margin-bottom: 10px; /* Adjust spacing above the alert icon */
+    gap: 10px; 
+    margin-bottom: 10px;
 }
 
 .social-media-icons img {
-    width: 40px; /* Adjust as needed */
+    width: 40px; 
     margin-left: 25px;
     height: auto;
 }
@@ -1634,11 +1639,13 @@ header {
     .hero-subheader,
     .hero-text {
         text-align: left;
-        width: 95%; /* Consistent width */
+        width: 95%;
         max-width: 600px;
-        margin: 0 auto; /* Center the elements */
-        margin-bottom: 15px; /* Adjust this value to bring elements closer */
+        margin: 0 auto; 
+        margin-bottom: 15px; 
     }
+
+ 
 
     /* Default (Mobile) Styles */
     .boxes-container {
@@ -1652,17 +1659,17 @@ header {
     .organisers-box,
     .audience-box {
         width: 90%; /* Full width for smaller screens */
-        margin: 20px auto; /* Center and add margin between boxes */
+        margin: 20px auto; 
     }
 
     .mission-lines,
     .hline,
     .hline2,
     .hline2-comedians {
-        display: none; /* Hide these elements for these screen sizes */
+        display: none; 
     }
 
-    footer {
+    footer {  
         font-size: 12px; /* Adjust font size for smaller screens */
         padding: 15px;
     }
@@ -1694,6 +1701,7 @@ header {
     .navbar {
         flex-direction: row;
         justify-content: space-between;
+        height: 30px;
     }
 
     .logo {
@@ -1702,7 +1710,8 @@ header {
 
     .nav-links {
         justify-content: flex-end;
-        gap: 50px; /* Increase gap between navigation links for desktop screens */
+        gap: 50px; 
+        margin-right: 20px;
     }
 
     .nav-link {
@@ -1714,7 +1723,7 @@ header {
         justify-content: flex-start; /* Align items to the start of the section */
         align-items: flex-start; /* Align items to the left */
         text-align: left; /* Align text to the left */
-        padding: 40px; /* Add padding for spacing */
+        padding: 40px; 
     }
 
     .hero-content {
@@ -1739,25 +1748,25 @@ header {
 
     .hero-subheader {
         font-size: 14px;
-        margin-bottom: 10px; /* Reduce spacing */
+        margin-bottom: 10px; 
     }
 
     .hero-text {
         font-size: 16px;
-        line-height: 28px; /* Adjust line height for text */
+        line-height: 28px; 
         margin-bottom: 10px; /* Reduce spacing */
     }
 
     .subscribe-button {
-        width: auto; /* Keep the button the same size as the mobile version */
+        width: auto;
         margin-left: 20px; /* Align with text */
     }
 
     .hero-image {
         position: absolute; /* Position the image absolutely */
-        top: 190px; /* Adjust as needed */
-        right: 5px; /* Adjust as needed */
-        width: 42%; /* Adjust size as needed */
+        top: 190px; 
+        right: 5px; 
+        width: 42%;
     }
 
     footer {
@@ -1784,31 +1793,23 @@ header {
     }
 
     .organisers-box, .comedians-box {
-        width: 45%; /* Adjust width for both boxes */
-        margin: 10px; /* Add some margin to create space between the boxes */
+        width: 45%; 
+        margin: 10px; 
     }
 
-    .boxes-container {
-        display: flex;
-        justify-content: space-between; /* Distribute space between the boxes */
-        width: 100%;
-        max-width: 800px; /* Optional: adjust max-width as needed */
-        margin-top: 20px; /* Adjust margin to control spacing from the top */
-    }
+   
     /* Add this new container for the boxes */
 .boxes-container {
     display: flex;
-    justify-content: space-between; /* Distribute space between the boxes */
+    justify-content: space-between; 
     width: 100%;
-    max-width: 800px; /* Optional: adjust max-width as needed */
+    max-width: 800px; 
     margin-top: 100px; /* Adjust margin to control spacing from the top */
 }
-
-/* Make sure the boxes take up equal space */
 .comedians-box,
 .organisers-box {
-    width: 45%; /* Adjust width for both boxes */
-    margin: 10px; /* Add some margin to create space between the boxes */
+    width: 45%; 
+    margin: 10px; 
 }
 
 .mission-container {
@@ -1820,93 +1821,91 @@ header {
 
 .mission-heroes {
     position: relative;
-    z-index: 2; /* Ensure it appears above the lines.svg */
+    z-index: 2; 
 }
 
 .mission-lines {
     position: absolute;
-    top: 90px; /* Adjust as needed to position under the box */
+    top: 90px; 
     left: 50%; /* Center horizontally */
     transform: translateX(-50%);
-    width: 180px; /* Adjust width as needed */
-    height: auto; /* Maintain aspect ratio */
-    z-index: 2; /* Ensure it appears above everything else but below the mission box */
+    width: 180px; 
+    height: auto; 
+    z-index: 2; 
 }
 #section2 .hline2 {
     position: absolute;
-    top: -70px; /* Adjust as needed */
-    left: 50%; /* Adjust as needed */
-    transform: translateX(-50%); /* Center horizontally */
-    width: 230px; /* Adjust size as needed */
-    height: auto; /* Maintain aspect ratio */
-    z-index: 2; /* Ensure it is above the grid lines but below the content */
+    top: -70px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 230px;
+    height: auto; 
+    z-index: 2; 
 }
 #section2 .hline {
     position: absolute;
-    bottom: 260px; /* Adjust as needed */
-    left: 50%; /* Adjust as needed */
-    transform: translateX(-50%); /* Center horizontally */
-    width: 230px; /* Adjust size as needed */
-    height: auto; /* Maintain aspect ratio */
-    z-index: 2; /* Ensure it is above the grid lines but below the content */
+    bottom: 260px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 230px;
+    height: auto; 
+    z-index: 2; 
 }
 
-
-/* Adjust the z-index of .organisers-box to be above the grid lines */
 .organisers-box {
-    position: relative; /* Ensure the position is relative to contain the pseudo-element */
-    z-index: 3; /* Ensure this is above the grid lines */
+    position: relative; 
+    z-index: 3; 
 }
 #section2 .rings {
-    top: 1000px; /* Adjusted value to move up */
+    top: 1000px;
 }
 
 #section2 .mouse {
-    top: 1050px; /* Adjusted value to move up */
+    top: 1050px;
 }
 .boxes-container {
         display: flex;
-        flex-wrap: wrap; /* Allow wrapping of boxes */
-        justify-content: space-around; /* Distribute space evenly */
-        align-items: center; /* Center align the boxes */
-        width: 100%; /* Ensure full width */
-        max-width: 1200px; /* Optional: set a max-width */
-        margin: 0 auto; /* Center the container */
+        flex-wrap: wrap; 
+        justify-content: space-around; 
+        align-items: center; 
+        width: 100%; 
+        max-width: 1200px; 
+        margin: 0 auto; 
     }
 
     .creation-box {
-        width: 45%; /* Adjust the width to fit two boxes per row */
-        max-width: 400px; /* Set a maximum width */
-        min-height: 250px; /* Ensure a minimum height for all boxes */
-        margin: 10px; /* Add margin to space out the boxes */
-        box-sizing: border-box; /* Include padding and border in the element's total width and height */
+        width: 45%; 
+        max-width: 400px; 
+        min-height: 250px; 
+        margin: 10px; 
+        box-sizing: border-box; 
     }
 
     .createicon-svg {
-        width: 60px; /* Adjust the size of the SVG */
+        width: 60px; 
         height: auto;
-        margin-bottom: 15px; /* Adjust margin */
+        margin-bottom: 15px; 
     }
 
     .box-title {
-        font-size: 18px; /* Adjust font size */
+        font-size: 18px; 
     }
 
     .box-description {
-        font-size: 14px; /* Adjust font size */
+        font-size: 14px; 
     }
 
     .joinnow-button {
-        width: 19%; /* Increase width for larger screens */
-        max-width: 250px; /* Remove maximum width restriction */
-        padding: 15px 30px; /* Increase padding for better touch support */
-        font-size: 15px; /* Increase font size for readability */
+        width: 19%; 
+        max-width: 250px; 
+        padding: 15px 30px; 
+        font-size: 15px; 
     }
 
     .circle-svg {
-        width: 120px; /* Adjust size for tablets */
-        height: 120px; /* Adjust size for tablets */
-        bottom: -30px; /* Adjust position */
+        width: 120px; 
+        height: 120px; 
+        bottom: -30px; 
     }
 
 
@@ -1916,88 +1915,88 @@ header {
         box-sizing: border-box;
         border: 1px solid #000000;
         box-shadow: -4px 4px 0px 0px #000000;
-        padding: 10px 20px; /* Adjust padding as needed */
+        padding: 10px 20px; 
         position: relative;
         font-weight: 600px;
-        margin-bottom: 20px; /* Add margin to create space below */
-        font-size: 18px; /* Adjust font size for mobile */
-        max-width: 25%; /* Ensure the box doesn't get too wide */
-        text-align: center; /* Ensure text is center-aligned */
+        margin-bottom: 20px; 
+        font-size: 18px; 
+        max-width: 25%;
+        text-align: center; 
         display: flex; /* Enable Flexbox */
-        justify-content: center; /* Center horizontally */
-        align-items: center; /* Center vertically */
-        height: 60px; /* Set a fixed height for the box */
+        justify-content: center; 
+        align-items: center; 
+        height: 60px; 
     }
   
     .text-staggered {
         text-align: left;
-        font-size: 31px; /* Text size */
-        font-family: 'Arial', sans-serif; /* Consistent font styling */
+        font-size: 31px; 
+        font-family: 'Arial', sans-serif; 
         color: transparent;
         -webkit-text-stroke: 1px #FF66FF; /* Pink stroke */
         font-weight: 550;
         z-index: 3;
         letter-spacing: 4px;
         text-transform: uppercase;
-        margin-bottom: 100px; /* Adjust margin to create space below */
+        margin-bottom: 100px; 
         right:800px;
     }
    
     .info-rectangle {
-        width: 85%; /* Adjust as needed for mobile */
-        max-width: 340px; /* Ensure a max width */
+        width: 85%; 
+        max-width: 340px; 
         padding: 20px;
         background: #002D65;
         box-sizing: border-box;
         border: 3px solid #FF37D0;
-        z-index: 3; /* Ensure it's above other elements */
-        color: #FFFFFF; /* White text color */
-        font-family: 'Poppins', sans-serif; /* Consistent font styling */
-        margin: 0 auto 50px auto; /* Center horizontally and add space below */
-        position: relative; /* Changed to relative positioning */
-        top: -250px; /* Move up by 50px, adjust as needed */
+        z-index: 3; 
+        color: #FFFFFF; 
+        font-family: 'Poppins', sans-serif; 
+        margin: 0 auto 50px auto; 
+        position: relative; 
+        top: -250px; 
         margin-left: 600px ;
     }
     .bullet-points {
         display: flex;
-        flex-direction: column; /* Stack bullet points vertically */
+        flex-direction: column; 
         align-items: flex-start; /* Align items to the left */
-        text-align: center; /* Center text within its container */
-        margin: 20px 0; /* Add margin for spacing */
+        text-align: center; 
+        margin: 20px 0; 
     }
     
     .bullet-point {
         display: flex;
-        align-items: flex-start; /* Align items to the top */
-        margin: 5px 0; /* Adjust margin between bullet points */
-        margin-left: 20px; /* Move bullet points to the right */
+        align-items: flex-start; 
+        margin: 5px 0; 
+        margin-left: 20px; 
         position: relative;
-        top: -100px; /* Move bullet points up */
+        top: -100px;
     }
     
     .bullet-point object {
-        margin-right: 10px; /* Space between SVG and text */
+        margin-right: 10px; 
         position: relative;
-        top: -100px; /* Move bullet up */
+        top: -100px; 
     }
     
     .bullet-point-text {
-        font-family: 'Gochi Hand', cursive; /* Consistent font styling */
-        font-size: 18px; /* Adjust size as needed */
-        color: #000000; /* Text color */
+        font-family: 'Gochi Hand', cursive; 
+        font-size: 18px;
+        color: #000000; 
         font-weight: 600;
-        width: 80%; /* Adjust width as needed to reduce text width */
+        width: 80%; 
         position: relative;
-        top: -100px; /* Move text up */
-        text-align: center; /* Center text within its container */
+        top: -100px; 
+        text-align: center; 
     }
 
     .text-staggered2 {
         text-align: right;
-        font-size: 34px; /* Text size */
-        font-family: 'Arial', sans-serif; /* Consistent font styling */
+        font-size: 34px; 
+        font-family: 'Arial', sans-serif; 
         color: transparent;
-        -webkit-text-stroke: 1px #FF66FF; /* Pink stroke */
+        -webkit-text-stroke: 1px #FF66FF; 
         font-weight: 550;
         z-index: 3;
         letter-spacing: 4px;
@@ -2008,35 +2007,35 @@ header {
 
     .smileyv-svg {
         position: absolute;
-        top: 760px; /* Adjust position */
+        top: 760px; 
         right: 550px;
-        width: 25%; /* Adjust size as needed */
-        max-width: 400px; /* Set a maximum width */
-        height: auto; /* Maintain aspect ratio */
+        width: 25%;
+        max-width: 400px; 
+        height: auto; 
     }
 
 
     .dec-svg {
         position: absolute;
-        top: 600px; /* Adjust position */
+        top: 600px; 
         left: 700px;
-        width: 15%; /* Adjust size as needed */
-        max-width: 400px; /* Set a maximum width */
-        height: auto; /* Maintain aspect ratio */
+        width: 15%;
+        max-width: 400px; 
+        height: auto; 
     }
     .top-half {
-        padding-top: 46px; /* Increase padding-top to move content down */
+        padding-top: 46px; 
     }
     #subscribe-form button {
-        font-size: 16px; /* Smaller font size */
-        padding: 8px 16px; /* Smaller padding */
-        width: 40%; /* Adjust width as needed */
+        font-size: 16px; 
+        padding: 8px 16px; 
+        width: 40%; 
         height: auto;
     }
     .center-svg {
-        max-width: 80%; /* Ensure SVG scales down if needed */
-        max-height: 80%; /* Ensure SVG scales down if needed */
-        margin-top: 60px; /* Add margin-top to move it down */
+        max-width: 80%;
+        max-height: 80%; 
+        margin-top: 60px; 
      
       
 
@@ -2048,7 +2047,7 @@ header {
         line-height: 32.76px;
         letter-spacing: 0px;
         color: #00285F;
-        margin: 0; /* Remove default margin */
+        margin: 0; 
         top:60%;
         width: 68%;
     }
@@ -2061,7 +2060,7 @@ header {
         letter-spacing: 0px;
         width: 50%;
         color: #030036;
-        margin: 10px 0 0 0; /* Adjust margin as needed */
+        margin: 10px 0 0 0; 
         margin-top: 35px;
         
     }
@@ -2071,21 +2070,21 @@ header {
         position: absolute;
         left: 0px;
         top: 237px;
-        max-width:120px; /* Adjust size as needed */
+        max-width:120px;
         height: auto;
     }
     .bottom-left2-svg {
         position: relative;
         left: 175px;
         bottom: 260px;
-        max-width: 105px; /* Adjust size as needed */
+        max-width: 105px;
         height: auto;
     }
     .bottom-left3-svg {
         position: absolute;
         right: 0px;
         top: 203px;
-        max-width: 120px; /* Adjust size as needed */
+        max-width: 120px;
         height: auto;
     }
     .alert-icon {
@@ -2104,14 +2103,14 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        max-width:280px; /* Adjust as needed */
+        max-width:280px; 
         height: 150px;
         
        
     }
     .enquiry-box .text {
   
-        font-size: 1.3em; /* Adjust as needed */
+        font-size: 1.3em; 
         font-weight: 100; /* Make the font bolder */
         margin-bottom:30px ;
    
@@ -2120,7 +2119,7 @@ header {
     }
     
     .enquiry-box .icon img {
-        width: 85px; /* Adjust as needed */
+        width: 85px; 
         height: auto;
     }
     
@@ -2138,60 +2137,71 @@ header {
     }
 
     .hero-content {
-        margin-top: 130px; /* Move the content down */
+        margin-top: 130px; 
     }
     
 
+ 
+        
+    
     .nav-links {
         justify-content: flex-end;
         gap: 50px; /* Increase gap between navigation links for desktop screens */
+        margin-right: 20px;
+        padding-top:05px ;
+    }
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+     
     }
 
+
     .nav-link {
-        font-size: 16px; /* Larger font size for desktops */
+        font-size: 16px; /* Larger font size */
     }
     
 
     .hero-header,
     .hero-subheader,
     .hero-text {
-        width: 55%; /* Set a specific width for these elements */
-        margin-left: 20px; /* Align to the left */
-        text-align: left; /* Ensure text is left-aligned */
+        width: 55%; 
+        margin-left: 20px; 
+        text-align: left; 
         margin-top: 60px;
     }
 
     .hero-header {
-        font-size: 55px; /* Larger font size for desktops */
-        margin-top: 20px; /* Increase spacing to move down */
+        font-size: 55px; 
+        margin-top: 20px; 
     }
 
     .hero-subheader {
         font-size: 16px;
-        margin-top: 20px; /* Increase spacing to move down */
+        margin-top: 20px; 
     }
 
     .hero-text {
         font-size: 18px;
-        line-height: 28px; /* Adjust line height for text */
-        margin-top: 20px; /* Increase spacing to move down */
+        line-height: 28px; 
+        margin-top: 20px; 
         width: 50%;
     }
 
     #hero {
-        padding: 60px 80px; /* Increase padding for larger screens */
+        padding: 60px 80px; 
     }
 
     .subscribe-button {
-        width: auto; /* Keep the button the same size as the mobile version */
-        margin-left: 20px; /* Align with text */
+        width: auto;
+        margin-left: 20px; 
     }
 
     .hero-image {
-        position: absolute; /* Position the image absolutely */
-        top: 190px; /* Adjust as needed */
-        right: 20px; /* Adjust as needed */
-        width: 40%; /* Adjust size as needed */
+        position: absolute; 
+        top: 190px; 
+        right: 20px; 
+        width: 40%;
     }
 
     footer {
@@ -2216,83 +2226,82 @@ header {
     #section2 .showtimestyle,
     #section2 .comedystyle
     {
-        width: 165px; /* Adjust size as needed */
-        height: 165px; /* Adjust size as needed */
+        width: 165px;
+        height: 165px;
     }
-
 
     #section2 .comedystyle
     {
-        width: 230px; /* Adjust size as needed */
-        height: 230px; /* Adjust size as needed */
+        width: 230px;
+        height: 230px;
     }
     #section2 .showtimestyle {
-        width: 200px; /* Adjust size as needed */
-        height: 200px; /* Adjust size as needed */
-        top: 720px; /* Adjust position as needed */
+        width: 200px;
+        height: 200px;
+        top: 720px; 
     }
     #section2 .rings {
-        width: 120px; /* Adjust size as needed */
-        height: 130px; /* Adjust size as needed */
-        top: 480px; /* Adjust position as needed */
+        width: 120px;
+        height: 130px;
+        top: 480px; 
         right: 200px;
     }
     #section2 .mouse {
-        width:35px; /* Adjust size as needed */
-        height: 35px; /* Adjust size as needed */
-        top: 730px; /* Adjust position as needed */
+        width:35px;
+        height: 35px;
+        top: 730px; 
         right: 700px;
     }
     .mission-lines {
         position: absolute;
-        top: 90px; /* Adjust as needed to position under the box */
-        left: 50%; /* Center horizontally */
+        top: 90px; 
+        left: 43%; 
         transform: translateX(-50%);
-        width: 280px; /* Adjust width as needed */
-        height: auto; /* Maintain aspect ratio */
-        z-index: 2; /* Ensure it appears above everything else but below the mission box */
+        width: 230px; 
+        height: auto; 
+        z-index: 2; /*  makimg it appears above everything else but below the mission box */
     }
     
     .comedians-box {
         position: absolute;
-        top: 200px; /* Adjust the top position as needed */
-        left: 150px; /* Adjust the left position as needed */
-        width: 300px; /* Set a fixed width */
-        height: auto; /* Ensure height adjusts to content */
-        max-width: 300px; /* Prevent width from changing */
-        min-width: 300px; /* Ensure minimum width */
+        top: 200px; 
+        left: 150px; 
+        width: 300px; 
+        height: auto; 
+        max-width: 300px; 
+        min-width: 300px; 
         z-index:1 ;
     }
     .organisers-box {
         position: absolute;
-        top: 300px; /* Adjust the top position as needed */
-        left: 440px; /* Adjust the left position as needed */
-        width: 300px; /* Set a fixed width */
-        height: auto; /* Ensure height adjusts to content */
-        max-width: 300px; /* Prevent width from changing */
-        min-width: 300px; /* Ensure minimum width */
+        top: 300px; 
+        left: 440px; 
+        width: 300px; 
+        height: auto; 
+        max-width: 300px; 
+        min-width: 300px; 
         z-index: 2;
        
     }
     .audience-box {
         position: absolute;
-        top: 600px; /* Adjust the top position as needed */
-        left: 800px; /* Adjust the left position as needed */
-        width: 270px; /* Set a fixed width */
-        height: 160px; /* Ensure height adjusts to content */
-        max-width: 300px; /* Prevent width from changing */
-        min-width: 300px; /* Ensure minimum width */
+        top: 600px; 
+        left: 800px; 
+        width: 270px; 
+        height: 160px; 
+        max-width: 300px; 
+        min-width: 300px; 
         z-index: 2;
        
     }
     .glitch-container {
         position: absolute;
-        top: 300px; /* Adjust the top position as needed */
-        left: 850px; /* Adjust the left position as needed */
-        width: 400px; /* Set a fixed width */
-        height: auto; /* Ensure height adjusts to content */
-        max-width: 600px; /* Prevent width from changing */
-        min-width: 300px; /* Ensure minimum width */
+        top: 300px; 
+        left: 850px; 
+        width: 400px; 
+        height: auto; 
+        max-width: 600px; 
+        min-width: 300px; 
         z-index: 2;
     }
     
@@ -2301,214 +2310,214 @@ header {
     }
   
     .sprocess-svg {
-        width: 45%; /* Make the SVG span the full width */
-        max-width: 800px; /* Optional: set a max-width */
-        margin: 40px auto; /* Adjust margin as needed */
+        width: 45%;
+        max-width: 800px; 
+        margin: 40px auto; 
     }
     .boxes-container {
-        flex-direction: row; /* Arrange boxes in a row on larger screens */
-        justify-content: space-between; /* Distribute space evenly */
-        align-items: center; /* Center align the boxes */
-        width: 100%; /* Ensure full width */
-        max-width: 1200px; /* Optional: set a max-width */
-        margin: 0 auto; /* Center the container */
+        flex-direction: row; 
+        justify-content: space-between; 
+        align-items: center; 
+        width: 100%; 
+        max-width: 1200px; 
+        margin: 0 auto;
     }
 
     .creation-box {
-        width: 22%; /* Adjust the width of each box */
-        max-width: 300px; /* Set a maximum width */
-        min-height: 340px; /* Ensure a minimum height for all boxes */
-        margin: 20px; /* Add margin to space out the boxes */
+        width: 22%; 
+        max-width: 300px; 
+        min-height: 340px; 
+        margin: 20px; 
     }
 
     .createicon-svg {
-        width: 80px; /* Increase the size of the SVG */
+        width: 80px; 
         height: auto;
-        margin-bottom: 15px; /* Adjust margin */
+        margin-bottom: 15px;
     }
 
     .box-title {
-        font-size: 18px; /* Increase font size */
+        font-size: 18px; 
     }
 
     .box-description {
-        font-size: 14px; /* Increase font size */
+        font-size: 14px; 
     }
 
     .joinnow-button {
-        width: 15%; /* Increase width for larger screens */
-        max-width: 250px; /* Remove maximum width restriction */
-        padding: 15px 30px; /* Increase padding for better touch support */
-        font-size: 16px; /* Increase font size for readability */
+        width: 15%; 
+        max-width: 250px; 
+        padding: 15px 30px; 
+        font-size: 16px;
     }
 
     .circle-svg {
-        width: 150px; /* Adjust size for larger screens */
-        height: 150px; /* Adjust size for larger screens */
-        bottom:-30px; /* Adjust position */
+        width: 150px; 
+        height: 150px; 
+        bottom:-30px; 
     }
 
 
     .info-rectangle {
-        width: 100%; /* Adjust as needed for mobile */
-        max-width: 340px; /* Ensure a max width */
+        width: 100%; 
+        max-width: 340px; 
         padding: 20px;
         background: #002D65;
         box-sizing: border-box;
         border: 3px solid #FF37D0;
-        z-index: 3; /* Ensure it's above other elements */
-        color: #FFFFFF; /* White text color */
-        font-family: 'Poppins', sans-serif; /* Consistent font styling */
-        margin: 0 auto 50px auto; /* Center horizontally and add space below */
-        position: relative; /* Changed to relative positioning */
-        top: -150px; /* Move up by 50px, adjust as needed */
+        z-index: 3; 
+        color: #FFFFFF; 
+        font-family: 'Poppins', sans-serif; 
+        margin: 0 auto 50px auto; 
+        position: relative; 
+        top: -150px; 
        left: 355px;
     }
     .smileyv-svg {
         position: absolute;
-        top: 950px; /* Adjust position */
-        right: 770px; /* Adjust position to the left */
-        width: 22%; /* Adjust size as needed */
-        max-width: 500px; /* Set a maximum width */
-        height: auto; /* Maintain aspect ratio */
+        top: 950px; 
+        right: 770px; 
+        width: 22%;
+        max-width: 500px; 
+        height: auto; 
     }
     .featuring-box {
         position: absolute;
-        bottom: 570px; /* Adjust position */
-        left: 29%; /* Center horizontally */
+        bottom: 570px; 
+        left: 29%; 
         top:50px;
-        transform: translateX(-50%); /* Center the box */
-        width: 25%; /* Adjust width as needed */
-        max-width: 400px; /* Set a maximum width */
-        height: 7%; /* Maintain aspect ratio */
-        text-align: center; /* Center text within the box */
-        font-size: 22px; /* Adjust font size for desktop */
+        transform: translateX(-50%); 
+        width: 25%; 
+        max-width: 400px; 
+        height: 7%; 
+        text-align: center; 
+        font-size: 22px; 
         font-weight: 500;
-        padding: 10px 20px; /* Adjust padding as needed */
-        margin-bottom: 20px; /* Add margin to create space below */
+        padding: 10px 20px; 
+        margin-bottom: 20px; 
     }
     .text-staggered {
         text-align: left;
-        font-size: 33px; /* Text size */
-        font-family: 'Arial', sans-serif; /* Consistent font styling */
+        font-size: 33px; 
+        font-family: 'Arial', sans-serif; 
         color: transparent;
-        -webkit-text-stroke: 1px #FF37D0; /* Pink stroke */
-        font-weight: 700; /* Make text bolder */
+        -webkit-text-stroke: 1px #FF37D0; 
+        font-weight: 700; 
         z-index: 3;
         letter-spacing: 4px;
         text-transform: uppercase;
-        margin-bottom: 100px; /* Adjust margin to create space below */
-        margin-top: 50px; /* Move element down */
+        margin-bottom: 100px; 
+        margin-top: 50px; 
         position: relative;
-        left:300px; /* Move element to the right */
+        left:300px; 
         top: 60px;
     }
     .text-staggered2 {
         text-align: left;
-        font-size:45px; /* Text size */
-        font-family: 'Arial', sans-serif; /* Consistent font styling */
+        font-size:45px; 
+        font-family: 'Arial', sans-serif; 
         color: transparent;
-        -webkit-text-stroke: 1px #FF37D0; /* Pink stroke */
-        font-weight: 700; /* Make text bolder */
+        -webkit-text-stroke: 1px #FF37D0; 
+        font-weight: 700; 
         z-index: 3;
         letter-spacing: 4px;
         text-transform: uppercase;
-        margin-bottom: 100px; /* Adjust margin to create space below */
-        margin-top: 50px; /* Move element down */
+        margin-bottom: 100px; 
+        margin-top: 50px; 
         position: relative;
-        left: 700px; /* Move element to the right */
+        left: 700px; 
         top: 120px;
     }
     .dec-svg {
         position: absolute;
-        top: 750px; /* Adjust the top position as needed */
-        left: 1000px; /* Adjust the left position as needed */
-        width: 15%; /* Adjust size as needed */
-        max-width: 400px; /* Set a maximum width */
-        height: auto; /* Maintain aspect ratio */
+        top: 750px; 
+        left: 1000px; 
+        width: 15%;
+        max-width: 400px; 
+        height: auto; 
         
 
     }
     .bullet-points {
         display: flex;
         flex-direction: column; /* Stack bullet points vertically */
-        align-items: flex-start; /* Align items to the left */
-        text-align: center; /* Center text within its container */
-        margin: 20px 0; /* Adjust margin for spacing */
+        align-items: flex-start; 
+        text-align: center; 
+        margin: 20px 0; 
     }
     
     .bullet-point {
         display: flex;
-        align-items: flex-start; /* Align items to the top */
-        margin: 0 0 30px 99px; /* Increase margin-left to move to the right and remove top margin */
+        align-items: flex-start; 
+        margin: 0 0 30px 99px; 
         position: relative;
-        top: -20px; /* Move the bullet points and text up */
+        top: -20px; 
     }
     
     .bullet-point object {
-        margin-right: 15px; /* Space between SVG and text */
+        margin-right: 15px; 
         position: relative;
-        top: 0; /* Ensure bullet stays in position relative to .bullet-point */
+        top: 0; 
     }
     
     .bullet-point-text {
-        font-family: 'Gochi Hand', cursive; /* Consistent font styling */
-        font-size: 18px; /* Adjust size as needed */
-        color: #000000; /* Text color */
+        font-family: 'Gochi Hand', cursive; 
+        font-size: 18px;
+        color: #000000; 
         font-weight: 600;
-        width: 65%; /* Adjust width as needed to reduce text width */
+        width: 65%; 
         position: relative;
-        top: 0; /* Ensure text stays in position relative to .bullet-point */
-        text-align: center; /* Center text within its container */
+        top: 0; 
+        text-align: center; 
     }
     
     .section4-content {
-        max-width: 130vw; /* Ensure content does not exceed viewport width */
+        max-width: 130vw; 
         overflow-x: hidden; /* Prevent 
         horizontal overflow in the content */
     }
 
     .comface-svg {
             display: block;
-            top: 24px; /* Position 50px from the top */
-            right: 1300px; /* Position 100px from the left */
-            width: 100px; /* Set a specific width */
+            top: 24px; 
+            right: 1300px; 
+            width: 100px; 
         }
 
     .comface-svg2 {
         display: block;
-        top: 60px; /* Position 50px from the top */
-        left: 1000px;; /* Position 100px from the left */
-        width: 100px; /* Set a specific width */
+        top: 60px; 
+        left: 1000px;; 
+        width: 100px; 
     }
 
     .comface2-svg {
-        display: block; /* Show on desktop screens */
-        top: 150px; /* Position 50px from the top */
-        right: 1095px; /* Position 405px from the left */
+        display: block; 
+        top: 150px; 
+        right: 1095px; 
     }
     .comface3-svg {
-        display: block; /* Show on desktop screens */
-        top: 300px; /* Position 50px from the top */
-        left: 289px; /* Position 405px from the left */
+        display: block; 
+        top: 300px; 
+        left: 289px; 
     }
     #section5 {
-        flex-direction: row; /* Stack top and bottom halves horizontally */
+        flex-direction: row; 
     }
     .top-half, .bottom-half {
-        width: 50%; /* Each takes half the width */
-        height: 100%; /* Full height of the section */
-        padding-top: 0; /* Remove padding-top to align vertically */
+        width: 50%; 
+        height: 100%; 
+        padding-top: 0; 
     }
     .top-half {
-        padding-top: 230px; /* Adjust this value to move content down */
+        padding-top: 230px; 
 
 }
 .bottom-left-svg {
     position: absolute;
     left: 0px;
     top: 265px;
-    max-width: 90px; /* Adjust size as needed */
+    max-width: 90px;
     height: auto;
 }
 
@@ -2517,7 +2526,7 @@ header {
     position: absolute;
     left: 0px;
     top: 265px;
-    max-width: 90px; /* Adjust size as needed */
+    max-width: 90px;
     height: auto;
 }
 
@@ -2542,45 +2551,45 @@ header {
     letter-spacing: 0px;
     width: 70%;
     color: #030036;
-    margin: 10px 0 0 0; /* Adjust margin as needed */
+    margin: 10px 0 0 0; 
     margin-top: 35px;
     margin-top: 40px;
     
 
 }
 .center-svg {
-    max-width: 60%; /* Ensure SVG scales down if needed */
-    max-height: 60%; /* Ensure SVG scales down if needed */
-    margin-top: 120px; /* Add margin-top to move it down */
+    max-width: 60%; 
+    max-height: 60%; 
+    margin-top: 120px; 
 }
 
 .bottom-left-svg {
     position: absolute;
     left: 0px;
     top: 582px;
-    max-width:120px; /* Adjust size as needed */
+    max-width:120px;
     height: auto;
 }
 .bottom-left2-svg {
     position: relative;
     left: 175px;
     bottom: 500px;
-    max-width: 150px; /* Adjust size as needed */
+    max-width: 150px;
     height: auto;
 }
 .bottom-left3-svg {
     position: absolute;
     right: 0px;
     top: 548px;
-    max-width: 120px; /* Adjust size as needed */
+    max-width: 120px;
     height: auto;
 }
 .top-half {
-    padding-bottom: 240px; /* Increase padding-top to move content down */
+    padding-bottom: 240px; 
 }
 #section6 {
-    height: 28vh; /* Adjust height for desktop screens */
-    justify-content: center; /* Center content vertically */
+    height: 28vh; 
+    justify-content: center; 
 }
 
 .enquiry-box {
@@ -2602,13 +2611,13 @@ header {
 }
 @media (min-width: 442px) and (max-width: 768px) {
     .hero-image {
-        display: none; /* Hide the image for these screen sizes */
+        display: none; 
     }
     .mission-lines,
     .hline,
     .hline2,
     .hline2-comedians {
-        display: none; /* Hide these elements for these screen sizes */
+        display: none; 
     }
 
     #hero {
@@ -2632,21 +2641,21 @@ header {
     }
 
     .mission-heroes {
-        width: 300px; /* Maintain the same width for desktops */
+        width: 300px; 
         font-size: 18px;
     }
     .comface-svg,
     .comface2-svg,
     .comface3-svg {
-        display: none; /* Hide these elements on mobile */
+        display: none; 
     }
     .top-half {
-        padding-top: 80px; /* Adjust this value to move content down */
+        padding-top: 80px;
     }
     #subscribe-form button {
-        font-size: 16px; /* Smaller font size */
-        padding: 8px 16px; /* Smaller padding */
-        width: 30%; /* Adjust width as needed */
+        font-size: 16px; 
+        padding: 8px 16px; 
+        width: 30%; 
         height: auto;
     }
    
@@ -2654,9 +2663,10 @@ header {
 
 /* Contact Section Styling */
 #contact {
-    background-color: #FFF4E6; /* Background color */
-    padding: 50px 20px; /* Padding for the section */
+    background-color: #FFF4E6; 
+    padding: 50px 20px; 
     display: flex;
+    height: 100vh;
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -2669,10 +2679,10 @@ header {
 
 .contact-header {
     font-family: 'Roboto Slab', serif;
-    font-size: 35px;
-    font-weight: 1100;
+    font-size: 40px;
+    font-weight: 1200;
     line-height: 63.18px;
-    color: #000000;
+    color: #00285F;
     margin-bottom: 25px;
 }
 
@@ -2681,7 +2691,7 @@ header {
     font-size: 16px;
     font-weight: normal;
     line-height: 24px;
-    color: #000000;
+    color: #00285F;
     margin-bottom: 25px;
 }
 
@@ -2689,6 +2699,7 @@ header {
     display: flex;
     flex-direction: column;
     width: 100%;
+    border-radius: 5px;
 }
 
 #contact-form label {
@@ -2696,7 +2707,8 @@ header {
     font-size: 14px;
     font-weight: 500;
     margin-bottom: 5px;
-    color: #000000;
+    color: #00285F;
+    border-radius: 5px;
 }
 
 #contact-form input,
@@ -2708,16 +2720,18 @@ header {
     border: 1px solid #ccc;
     border-radius: 5px;
     width: 100%;
+    border-radius: 15px;
 }
 
 #contact-form button {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     padding: 10px 20px;
+    font-weight: 300;
     background-color: #00285F;
     color: #fff;
     border: none;
-    width: 50%;
+    width: 40%;
     align-self: center; /* Center the button within the form */
     border-radius: 10px;
     cursor: pointer;
