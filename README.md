@@ -1,4 +1,4 @@
-# Comhub
+# Comhub (read me in progress)
 
 ## Project Overview
 
@@ -46,9 +46,3 @@ I'm working on this project as a personal portfolio endeavor, driven by my passi
 - **Responsive Design**: Ensures the website is accessible on various devices and screen sizes.
 
 
-
-```bash
-git clone https://github.com/blbsoo/comhub.git
-cd comhub
-npm install
-npm run dev
