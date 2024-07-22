@@ -1,114 +1,54 @@
-Comhub
+# Comhub
 
-- Project Overview
+## Project Overview
 
-Introducing Comhub - a platform conceptually designed for comedians to find gigs, connect with fellow comedians, for organizers to find comedians, and for audiences to explore comedy gigs! Comhub started as an idea for a "comedian-organizer matching app" and has evolved into a comprehensive platform where comedians can connect, improve their art, and organizers can find talent.
+Comhub is a platform designed for comedians to find gigs, connect with fellow comedians, and for organizers to discover comedic talent. Additionally, it provides a space for audiences to explore comedy gigs. What started as a simple "comedian-organizer matching app" has evolved into a comprehensive platform aiming to improve the comedic community.
 
-- Current Status
-This project is currently under development. Here is a breakdown of the ongoing tasks:
+⬇️⬇️LIVE DEMO OF THE LANDING PAGE⬇️⬇️
+[https://lnkd.in/edBqECCK](https://lnkd.in/edBqECCK)
 
-- Front-End Development: Currently working on designing and implementing the user interface.
-- Database Setup: Planning and structuring the database to manage users, events, and interactions.
-- Back-End Development: Will focus on creating the server-side logic and API integrations after completing the database setup.
-Features (Planned)
+## Motivation
 
-Sitemap:
+Existing platforms like GigGag and OpenComedy lack user-friendliness and fail to offer a well-rounded community space and personalized, easy-to-build portfolios. Comhub aims to fill these gaps with user-friendly features and a more comprehensive approach to connecting comedians, organizers, and audiences.
 
-1. Home Page
-About Us
-What We Offer
-Simple Process
-Features
-Social Media Links
-Future Events
-Login/Sign-Up
+## Personal Note
 
-3. Navigation Bar
-Home
-Laugh Lounge
-Resources and Tools
-Contact Us
-Profile Icon (Login/Sign-Up)
-Profile
-Account
-Portfolio (Comedian)
-My Applications (Comedian)
-Gigs
-Log Out
-
-4. Login/Sign-Up
-Select Role
-Organiser
-Comedian
-Audience
-Redirect to Laugh Lounge
-
-5. Organiser Flow
-Laugh Lounge (Default)
-Post/Interact
-Create Gigs
-Gig Details
-Submit Gig
-Gigs Management
-View Applicants
-Manage Ongoing Gigs
-View Gig History
-Profile
-View/Edit Profile
-Edit (Redirect to Account Settings)
-Account Settings
-Edit Personal Information
-Preferences
-Data/Community Standards
-Legal Policies
-
-6. Comedian Flow
-Laugh Lounge (Default)
-Post/Interact
-Resources and Tools
-Films, Books, Podcasts, Articles
-Like/Dislike
-Suggest Content
-Profile
-View/Edit Profile
-Edit (Redirect to Account Settings)
-View Portfolio
-Portfolio
-Specific Section
-Scroll View
-Account Settings
-Edit Personal Information
-Preferences
-Data/Community Standards
-Legal Policies
-My Applications
-View Status
-History
-Future Gigs
-Find Gigs
-Gigs
-Find/Apply
-
-7. Audience Flow
-Laugh Lounge (Default)
-Post/Interact
-Upcoming Events
-View Events
-Buy Tickets
-Top Comedians/Venues
-View Top Comedians
-View Top Venues
-Profile
-View Profile
-Account Settings
-Edit Personal Information
-Preferences
-Data/Community Standards
-Legal Policies
+I'm working on this project as a personal portfolio endeavor, driven by my passion for creating and viewing software and web development as forms of art. This project is not for commercial or personal gain but to showcase my skills in UI/UX design and front-end development. While the landing page model is ready, I'm currently working on the back-end and the rest of the development.
 
 
-- Tech Stack
-Front-End: HTML, CSS, JavaScript, React (planned)
-Back-End: Node.js, Express.js (planned)
-Database: MongoDB, Firebase (planned)
-Tools: GitHub for version control
+## Technologies Used
+
+### UI/UX Designer & Front-End Developer
+- **HTML**: For structuring the web content.
+- **CSS**: For styling and layout configurations.
+- **JavaScript**: For adding interactivity and dynamic content.
+
+## Features
+
+- **Gig Matching System**: Connects comedians with potential gigs.
+- **Community Space**: Facilitates interaction and networking among comedians.
+- **Portfolio Builder**: Allows comedians to create personalized portfolios easily.
+- **Organizational Tools**: Helps organizers find and manage comedic talent.
+- **Event Exploration**: Enables audiences to discover comedy gigs.
+
+## Design and User Interface
+
+- **UI Designs of the landing page**:
+  ![1719321971784](https://github.com/user-attachments/assets/551b758f-3dc7-4514-ad0a-ef83368c0c4f)
+  ![1719321971847](https://github.com/user-attachments/assets/3db77101-fd4c-4e2e-832c-97326babb5c8)
+![1719321971665](https://github.com/user-attachments/assets/e6b89e8a-3c73-401e-9d64-56968df6a6d2)
+
+- **UI Designs of oter pages of the website**:
+- 
+
+
+- **Visual Effects and Animations**: Enhances user interaction and aesthetic appeal.
+- **Responsive Design**: Ensures the website is accessible on various devices and screen sizes.
+
+
+
+```bash
+git clone https://github.com/blbsoo/comhub.git
+cd comhub
+npm install
+npm run dev
